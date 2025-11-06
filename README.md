@@ -29,8 +29,35 @@ Checkout Flow: Submit the cart and generate a mock receipt with total and timest
 
 Responsive Design: Works smoothly on both desktop and mobile.
 
+Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/mock-ecom-cart.git
+cd mock-ecom-cart
+2️⃣ Install Dependencies
+Install dependencies for backend and frontend:
+cd backend
+npm install
+cd ../frontend
+npm install
+3️⃣ Configure Environment Variables
+Create a .env file inside /backend and add:
+PORT=5000
+MONGO_URI=mongodb+srv://schaitanya2825:<Chaitanya300>@vibecart.vagsxjf.mongodb.net/?appName=vibecart
+4️⃣ Start the Application
+From the backend directory, run:
+npm start
+Visit the app at 👉 http://localhost:5000
 
-Project Structure
+API Endpoints
+| Method     | Endpoint        | Description                                        |
+| ---------- | --------------- | -------------------------------------------------- |
+| **GET**    | `/api/products` | Retrieve list of mock products                     |
+| **POST**   | `/api/cart`     | Add item to cart (`{ productId, qty }`)            |
+| **DELETE** | `/api/cart/:id` | Remove an item from the cart                       |
+| **GET**    | `/api/cart`     | Retrieve cart items with total amount              |
+| **POST**   | `/api/checkout` | Mock checkout → returns receipt (total, timestamp) |
+
+
 
 
 
